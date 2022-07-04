@@ -1,0 +1,24 @@
+name: deploy4
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: name of the runner venkat
+        required: true
+        default: "venkat"
+      name2:
+        description: optional
+        required: false
+        default: "na"
+
+jobs:
+  testing2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print test4
+        run: echo "test4"
+      - name: shell commands
+        run: |
+          node -v
+          npm -v
